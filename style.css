@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #444;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.container{
+    width: 90%;
+    height: 90%;
+    background-color: blueviolet;
+    margin: auto;
+    overflow: hidden;
+}
+
+.elements{
+    width: 100%;
+    margin: auto;
+}
+
+
+/* montañas */
+
+.montañas{
+    display: flex;
+    align-items: end;
+    width: 40%;
+    background-color: chartreuse;
+    margin: auto;
+}
+
+.montañas img{
+    filter: drop-shadow(10px 0 7px rgba(0,0,0,0.5));
+    object-fit: contain;
+    width: 80%;
+}
+
+.montañas img:nth-child(2),
+.montañas img:nth-child(3){
+    margin-left: -40px;
+}
+
+.montañas img:nth-child(2){
+    z-index: 10;
+    width: 100%;
+}
+
+/* CLOUDS */
+
+.clouds{
+    display: flex;
+}
+
+.clouds img{
+    width: 80px;
+    filter: drop-shadow(10px 0 7px rgba(0,0,0,0.5));
+}
+
+/* sky */
+
+.fondo{
+    
+}
+
+.fondo img{
+    width: 700px;
+}
