@@ -4,20 +4,39 @@ body{
     background-color: #444;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .container{
     width: 90%;
     height: 90%;
-    background-color: blueviolet;
-    margin: auto;
     overflow: hidden;
 }
 
 .elements{
-    width: 100%;
     margin: auto;
+}
+
+/* FONDO */
+
+.sky{
+    margin-bottom: -100%;
+    position: relative;
+    width: 900px;
+    margin-top: auto;
+    animation: cielo 2s infinite linear;
+}
+
+@keyframes cielo{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(0deg);}
+    50%{transform: rotate(175deg);}
+    75%{transform: rotate(175deg);}
+    100%{transform: rotate(360deg);}
+
 }
 
 
@@ -26,15 +45,15 @@ body{
 .montañas{
     display: flex;
     align-items: end;
-    width: 40%;
-    background-color: chartreuse;
     margin: auto;
+    justify-content: center;
+    margin-top: 130px;
 }
 
 .montañas img{
-    filter: drop-shadow(10px 0 7px rgba(0,0,0,0.5));
+    filter: drop-shadow(5px 0 7px rgba(0,0,0,0.5));
     object-fit: contain;
-    width: 80%;
+    width: 100px;
 }
 
 .montañas img:nth-child(2),
@@ -44,26 +63,41 @@ body{
 
 .montañas img:nth-child(2){
     z-index: 10;
-    width: 100%;
+    width: 150px;
 }
 
 /* CLOUDS */
 
 .clouds{
     display: flex;
+    justify-content: space-around;
 }
 
 .clouds img{
     width: 80px;
-    filter: drop-shadow(10px 0 7px rgba(0,0,0,0.5));
+    filter: drop-shadow(7px 0 7px rgba(0,0,0,0.5));
+    position: relative;
+    object-fit: contain;
 }
 
-/* sky */
-
-.fondo{
-    
+.clouds img:nth-child(1),
+.clouds img:nth-child(4){
+    transform: translateY(60px);
 }
 
-.fondo img{
-    width: 700px;
+
+
+/* floor */
+
+.floor{
+    width: 100%;
+    z-index: 100;
+    position: relative;
 }
+
+.floor .piso{
+    object-fit: contain;
+    width: 100%;
+    margin-top: -5px;
+}
+
